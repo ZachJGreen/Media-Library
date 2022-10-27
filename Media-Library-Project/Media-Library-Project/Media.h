@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 using namespace std;
 class Media {
 private:
@@ -31,5 +32,14 @@ public:
 	void setGenre(string s) { genre = s; }
 	void setLength(int i) { length = i; }
 	void setYearReleased(int i) { yearReleased = i; }
+
+	int readDataFile(ifstream fin, ofstream fout, vector<Media> m);
+	char printMenu();
+	void printBookList(vector<Media> m);
+	void printSong(vector<Media> m);
+	void printMovieList(vector<Media> m);
+	void printList(vector<Media> m);
+	void printTotals();
+	void addContent(vector<Media>& m);
 
 };
