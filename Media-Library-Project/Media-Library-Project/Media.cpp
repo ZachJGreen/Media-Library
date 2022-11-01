@@ -8,43 +8,21 @@ using namespace std;
 Media::Media() {
 	type = ' ';
 	title = "";
+	keyName = "";
 	rating = 0;
 	genre = "";
+	length = 0;
 	yearReleased = 0;
 
 }
 
-Media::Media(char type, string title, int rating, string genre, int yearReleased) {
+Media::Media(char type, string title, string keyName, int rating, string genre, int length, int yearReleased) {
 	this->type = type;
 	this->title = title;
+	this->keyName = keyName;
 	this->rating = rating;
 	this->genre = genre;
+	this->length = length;
 	this->yearReleased = yearReleased;
 }
 
-int readDataFile(ifstream fin, ofstream fout, vector<Media> m) {
-	fin.open("mediaList.csv");
-	string line, tempStr;
-	vector<Media> row;
-	if (!fin.is_open()) {
-		cout << "File did not open" << endl;
-		return -1;
-	}
-
-	getline(fin, line);
-	while (fin.good()) {
-		stringstream ss(line);
-		row.clear();
-
-		while (getline(ss, tempStr, ',')) {
-			row.push_back(tempStr)
-		}
-	}
-}
-char printMenu() {}
-void printBookList(vector<Media> m) {}
-void printSong(vector<Media> m) {}
-void printMovieList(vector<Media> m) {}
-void printList(vector<Media> m) {}
-void printTotals() {}
-void addContent(vector<Media>& m) {}

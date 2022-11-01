@@ -1,0 +1,6 @@
+﻿  Utilities.cpp
+C:\Users\Zach\Documents\GitHub\Media-Library\Media-Library-Project\Media-Library-Project\Utilities.cpp(52,28): warning C4101: 'e': unreferenced local variable
+C:\Users\Zach\Documents\GitHub\Media-Library\Media-Library-Project\Media-Library-Project\Utilities.cpp(107,14): warning C4305: 'return': truncation from 'int' to 'char'
+C:\Users\Zach\Documents\GitHub\Media-Library\Media-Library-Project\Media-Library-Project\Utilities.cpp(107,10): warning C4309: 'return': truncation of constant value
+C:\Users\Zach\Documents\GitHub\Media-Library\Media-Library-Project\Media-Library-Project\Utilities.cpp(254,27): warning C4101: 'e': unreferenced local variable
+  Media-Library-Project.vcxproj -> C:\Users\Zach\Documents\GitHub\Media-Library\Media-Library-Project\x64\Debug\Media-Library-Project.exe

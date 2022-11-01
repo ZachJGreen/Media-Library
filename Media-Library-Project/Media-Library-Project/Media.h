@@ -4,6 +4,7 @@
 using namespace std;
 class Media {
 private:
+	//Initialize private data members
 	char type;
 	string title;
 	string keyName;
@@ -13,10 +14,11 @@ private:
 	int yearReleased;
 
 public:
-	Media() {}
+	//Constructors
+	Media();
+	Media(char type, string title, string keyName, int rating, string genre, int length, int yearReleased);
 
-	Media(char type, string title, int rating, string genre, int yearReleased) {}
-
+	//Get value of private data members
 	char getType() { return type; }
 	string getTitle() { return title; }
 	string getKeyName() { return keyName; }
@@ -25,6 +27,7 @@ public:
 	int getLength() { return length; }
 	int getYearReleased() { return yearReleased; }
 
+	//Set value of private data members
 	void setType(char c) { type = c; }
 	void setTitle(string s) { title = s; }
 	void setKeyName(string s) { keyName = s; }
@@ -33,13 +36,10 @@ public:
 	void setLength(int i) { length = i; }
 	void setYearReleased(int i) { yearReleased = i; }
 
-	int readDataFile(ifstream fin, ofstream fout, vector<Media> m);
-	char printMenu();
-	void printBookList(vector<Media> m);
-	void printSong(vector<Media> m);
-	void printMovieList(vector<Media> m);
-	void printList(vector<Media> m);
-	void printTotals();
-	void addContent(vector<Media>& m);
+	//Static variables for counting
+	static int numMovies;
+	static int numSongs;
+	static int numBooks;
 
 };
+
